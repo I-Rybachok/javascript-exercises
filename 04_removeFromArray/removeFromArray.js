@@ -1,11 +1,13 @@
-const removeFromArray = function(arr, num) {
+const removeFromArray = function(arr, ...num) {
   let arr_result = [];
   
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === num) {
-      continue;
-    } else {
-      arr_result.push(arr[i])
+    for (let j = 0; j < num.length; j++){
+      if (arr[i] === num[j]) {
+        continue;
+      } else {
+        arr_result.push(arr[i]);
+      }
     }
   }
 return arr_result;
